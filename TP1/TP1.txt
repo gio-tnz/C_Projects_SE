@@ -1,0 +1,55 @@
+TP1 TINAZZI Giovanni 
+
+Exercice 2
+2.1)
+
+Dans cette section de l'exercice, on s'interesse a la commande 'man'. Cette commande permet  d'acceder au manuel du systeme Unix. 
+Dans les exemples du TP, les commandes vont nous servir a afficher le manuel de la commande 
+'man'(qui explique comment marche le manuel), la commande 'echo'(qui sert à afficher une 
+chaine de caractere sur le terminal) et la commande head(qui affiche que le debut du fichier)
+
+Si on cherche en ligne, par exemple 'bash how to merge two files', on va trouver la commande Unix qui va nous servir pour faire ce que l'on a demande.
+
+Exercice 2.2 
+
+La commande 'echo' a pour fonction d'afficher une chaine de caractere sur le terminal. 
+Les parametres de cette commande sont 'echo [option] [texte]'.
+On peux par exemple utiliser 'echo -n' pour eviter le saut a la ligne apres avoir affiche
+notre chaine de caractere.
+
+Exercice 2.3
+
+Pour creer un fichier vide à partir de la ligne de commande, la commande necessaire est la cocommande "touch" qui a comme parametre 'touch [nom du fichier]'.
+
+Par exemple, si on veux creer un fichier pour ecrire notre rapport de Tp, on aura juste a 
+taper dans notre terminal 'touch TP1.txt'
+
+Exercice 2.4
+
+Si on tape dans le shell 'nautilus', notre systeme va immediamenet lancer le programme 
+en question (ici Nautilus est un programme qui est enfaite le gestionnaire de fichiers libre de l'environnement de bureau libre GNOME)
+Si on ressaye cette commande mais avec des parametres differents (ex notre dossier Documents) notre systeme va lancer nautilus et en plus de ca il va directement aller dans le dossier
+Documents.
+
+Exercice 2.5
+
+a)  Les trois commandes suivantes ont pour but de d'afficher le nombre de mot que contient le fichier 'foo.txt', mais ont quelques differences:
+
+- la commande 'wc -w < foo.txt' redirige le fichier vers l'entree standard
+- la commande 'cat foo.txt | wc -w' concatene les fichier et avec le pipe (|) il va rediger  cette concatenation vers l'entree suivante, c'est adire la commande permettant de compter les mots du fichier pour ensuite affichier le resultat dans l'entree standard
+- la commande 'wc -w foo.txt' envoie directement le resulat sur le flux de sortie, qui est   defaut l'entree standard
+
+
+b) les deux commande ont pour but d'afficher dans la sortie standard une partie du texte,    sauf que la premiere commande affiche les 6 premieres lignes de notre fichier ("head" en anglais signifie tete, donc le debut du fichier) alors que la deuxieme commande a pour but 
+d'afficher les 6 dernieres lignes du fichier ("tail" en anglais siginifie queue, donc la fin du texte)
+
+c)En executant la commande, on se retrouve avec tout le texte du fichier foo.txt dans 
+out2.txt, alors que le fichier out1.txt est vide.
+Cela s'explique du fait que notre ligne de commande dans un premier temps va trier (avec la 
+commande 'sort' ) le contenu du fichier foo.txt dans out1.txt. Puis ensuite va rediriger le 
+contenu du fichier out1.txt dans le fichier out2.txt.
+
+Dans le cas ou le fichier foo.txt n'existait pas, le fichier inexistant est considere comme 
+vide et donc les deux fichier out1.txt et out2.txt seront vide eux aussi.
+
+
