@@ -87,7 +87,7 @@ void Hash_String(int argc, char *argv[], const char *hash_name)
     {
         EVP_DigestUpdate(mdctx, argv[optind], strlen(argv[optind]));
 
-        // pour ne pas considerer le dernier espace du saut de ligne avoir le bon hash
+        // pour ne pas considerer le dernier espace du saut de ligne avoir le bon hash (cf: erreur corrige)
         if(optind != argc -1){
             EVP_DigestUpdate(mdctx, " ", strlen(" ")); 
         }
